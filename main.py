@@ -38,8 +38,16 @@ def main():
     state = {}    # TC 간 공유 상태(할 일 목록, 첫 항목 등)
     driver = get_driver()
     try:
-        driver.get(URL)
-        time.sleep(1)
+        try:
+            driver.get(URL)
+            time.sleep(1)
+        except Exception as e:
+            # URL 접근 실패 시 스크린샷 저장 및 에러 메시지 출력 후 종료
+            save_screenshot(driver, f"fail_URL_access_{timestamp()}")
+            print(f"[URL 접근 실패] {URL}\n에러: {e}")
+            results.append(f"[URL 접근 실패] {e}")
+            return  # 테스트 중단
+
         for name, func in test_cases:
             print(f"{name} 테스트 실행 중...")
             try:
