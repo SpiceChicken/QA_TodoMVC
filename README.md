@@ -1,7 +1,8 @@
 # QA 포트폴리오 - TodoMVC 테스트 프로젝트
 
 ## 📌 프로젝트 소개
-- 테스트 대상: [TodoMVC - React Example](http://localhost:8000/todomvc/examples/react/dist/)
+- 테스트 대상: [TodoMVC - React Example](https://todomvc.com/examples/react/dist/)
+  - TodoMVC Git: https://github.com/tastejs/todomvc
 - 목표: 수동 테스트 케이스 설계 및 Selenium을 활용한 테스트 자동화 수행
 
 ## 📋 수행 항목
