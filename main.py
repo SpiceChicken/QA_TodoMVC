@@ -12,7 +12,7 @@ from tests import (
     tc005_filter_completed,
 )
 
-URL = "http://localhost:8000/examples/react/dist/"
+URL = "https://todomvc.com/examples/react/dist/"
 
 def timestamp():
     # 현재 시각을 문자열로 반환 (스크린샷 파일명 등에 사용)
